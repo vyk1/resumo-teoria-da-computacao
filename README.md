@@ -1,6 +1,7 @@
 # Teoria da Computação
 
 Este projeto uma busca colaborar com o aprendizado de Teoria da Computação unificando conteúdos a cerca da disciplina de forma moderna e colaborativa.
+
 [Live](https://teoria-da-computacao.netlify.app/)
 
 ## Construído com [Ionic](https://ionicframework.com/)
@@ -23,22 +24,22 @@ Clone este repositório:
 git clone https://github.com/vyk1/resumo-teoria-da-computacao.git
 ```
 
-Run the application:
+Rode a aplicação:
 
 ```
-cd [PROJECT NAME]
-ng serve
+cd resumo-teoria-da-computacao
+npm run start
 ```
 
 ## Para contribuir
 
 1. Forqueie-o (https://github.com/vyk1/resumo-teoria-da-computacao/fork)
 2. Crie sua branch com a feature (`git checkout -b feature/fooBar`)
-2.1 Caso sua alteração seja no conteúdo, não se esqueça da fonte!
+2.1 Caso sua alteração seja no conteúdo, não se esqueça de referenciar a fonte!
 3. Commite suas alterações (`git commit -am 'Add some fooBar'`)
 4. Envie para a branch (`git push origin feature/fooBar`)
 5. Crie sua Pull Request
 
 ## Colaboradores
 
-* **Victoria Botelho Martins ** - *Initial work* - [vyk1](https://github.com/vyk1)
+* **Victoria Botelho Martins** - [vyk1](https://github.com/vyk1)

@@ -1,0 +1,207 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Autômatos Finitos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Definição</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Mais simples na hierarquia</li>
+        <li>A única memória utilizada é aquela
+          gasta para armazenar a cadeia de entrada</li>
+        <li>Portanto, apenas armazenam o estado atual</li>
+        <li>Reconhecem linguagens regulares</li>
+      </ul>
+    </ion-item>
+
+    <ion-card-header>
+      <ion-card-title>Detalhes</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Fita unidirecional -></li>
+        <li>Fita de leitura (não grava símbolos)</li>
+        <li>No caso dos determinísticos, tempo necessário: sendo w uma cadeia |w|=n; é O(n)</li>
+      </ul>
+    </ion-item>
+
+    <ion-card-header>
+      <ion-card-title>Tipos</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Podem ser <a (click)="scrollToElement('det')">determinísticos</a> ou <a
+            (click)="scrollToElement('notdet')">não</a></li>
+      </ul>
+    </ion-item>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>Operações</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li><b>Complemento</b></li>
+        <li><b>União</b></li>
+        <li><b>Intersecção</b></li>
+        <li><b>Diferença</b></li>
+        <li><b>Fecho de Kleene</b></li>
+      </ul>
+    </ion-item>
+  </ion-card> -->
+
+  <ion-card>
+    <ion-card-header id="det">
+      <ion-card-title>Determinísticos(AFD)</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>São definidas pela quíntula:
+      </ion-item>
+      <ion-item>
+        <ul>
+          <li>Q: conjunto finito não vazio de estados</li>
+          <li>&Sigma;: conjunto finito de símbolos (alfabeto)</li>
+          <ul>&delta;: função de transição de estados (indica as transições possíveis em cada configuração)
+            <li>Q x E => Q</li>
+          </ul>
+          <ul>Lê-se: cada par (estado, símbolo de entrada) determina um NOVO ESTADO
+            <br /> d(p,a) = q=> indicando o
+            <b>determinismo</b>
+          </ul>
+          <li>q0: estado inicial (pertence ao Q)</li>
+          <li>F: conjunto finito de estados finais (aceitação); subconjunto de Q</li>
+        </ul>
+      </ion-item>
+
+      <ion-item>Possui apenas um estado que pode transitar para cada símbolo de entrada</ion-item>
+      <ion-item>Algumas transições podem ser disparadas sem consumir nenhum
+        símbolos de entrada &Epsilon;
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header id="notdet">
+      <ion-card-title>Não Determinísticos(AFND)</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>São definidos pela mesma quíntupla dos determinísticos</ion-item>
+      <ion-item><b>PORÉM:</b></ion-item>
+      <ion-item>permite zero, uma ou mais transições de um estado sobre o MESMO símbolo de entrada</ion-item>
+      <ion-item>
+        <ul>
+          <!-- &delta;: Q x (&Sigma; U &epsilon;) -> P(Q) -->
+          <li>&delta;=> 2^Q</li>
+          <li>q0: conjunto</li>
+          <li>Lê-se: cada par (estado, símbolo de entrada) determina um NOVO CONJUNTO DE ESTADOS</li>
+        </ul>
+      </ion-item>
+      <ion-item>Portanto, possibilita alternativas distintas</ion-item>
+      <ion-item>Possui múltiplas transições de um estado atual para cada símbolo de entrada</ion-item>
+      <ion-item>Um estado é final se possui algum estado final</ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>&Sigma;-AFND</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        Aqui, estados finais são alcançados a partir de estado com 0 ou mais transições vazias (&Epsilon;)
+      </ion-item>
+      <ion-item>
+        Se a Linguagem é aceita por um AFND também será por um &Sigma; AFND e desta forma é regular
+      </ion-item>
+      <ion-item>
+        É possível converter um &Sigma; AFND em um AFD
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>AFD x AFND</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        Se uma linguagem é aceita por um AFD, então também é por um AFND
+      </ion-item>
+      <ion-item>
+        <b>Porém não são iguais, são equivalentes</b>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>União</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        É uma operação fechada sobre uma classe das Linguagens Regulares,
+        ou seja se L é uma LR então L' também é uma LR e vice-versa
+      </ion-item>
+      <ul>
+        <li>L está contido em &Sigma;*</li>
+        <li>L'= conjunto(w e w &Sigma;* e w não-e L), ou seja &Sigma;* - L</li>
+      </ul>
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Dicas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        Um conjunto de todas as cadeias possíveis compostas por símbolos em &Sigma; é &Sigma;*
+      </ion-item>
+      <ion-item>
+        Um Autômato que aceita cadeias com 0s e 1s e que terminam com 01 é expresso por (0+1)*01
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Listas de exercícios
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-virtual-scroll [items]="exercices" approxItemHeight="320px">
+        <ion-card *virtualItem="let item; let itemBounds = bounds;">
+          <ion-card-header>
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+              <ion-card-title>{{ item.title }}</ion-card-title>
+            </a>
+          </ion-card-header>
+        </ion-card>
+      </ion-virtual-scroll>
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Como ler ab*c...?
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card> -->
+
+</ion-content>

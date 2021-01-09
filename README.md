@@ -1,1 +1,1 @@
-# [De](https://github.com/vyk1/carreira_unica/tree/main/Aula1) 
+# [Movido!](https://github.com/vyk1/resumo-teoria-da-computacao) 

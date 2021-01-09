@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Linguagens Regulares</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        Uma Linguagem Regular é constituída de cadeias
+        finitas
+      </ion-item>
+      <ion-item>Desta forma, sendo L uma linguagem, uma gramática gera L e um autômato reconhece L</ion-item>
+      <ion-item><b>Não confundir Linguagens Regulares com Gramáticas Regulares</b></ion-item>
+      <ion-item>
+        <ion-item>
+          Como mostrar que uma linguagem é regular?
+        </ion-item>
+        <ul>
+          <li (click)="navigateToAF()">
+            <ion-text color="secondary">Autômatos Finitos (Determinísticos ou Não)</ion-text>
+          </li>
+          <li>Expressões Regulares</li>
+        </ul>
+        <br />
+      </ion-item>
+
+      <ion-item>
+        <ion-item>
+          Como mostrar que uma linguagem não é regular?
+        </ion-item>
+        <ul>
+          <li>Propriedade de fechamento</li>
+          <li>Lema do bombeamento</li>
+        </ul>
+        <br />
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-img id="chom" src="../../assets/images/chomsky-h.jpg"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fonte: 1*</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Exemplos</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Analisadores léxicos</li>
+        <li>Verificar se tamanho de uma palavra é ímpar ou par</li>
+        <li>Verificar se a quantidade de dígitos 1 em uma palavra é
+          ímpar/par</li>
+        <li>Pesquisar por ocorrência de um padrão em uma palavra</li>
+      </ul>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Fontes</ion-card-title>
+    </ion-card-header>
+
+    <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+      <ion-card *virtualItem="let item; let itemBounds = bounds;">
+        <ion-card-header>
+          <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+            <ion-card-title>{{ item.title }} {{item.key}}</ion-card-title>
+          </a>
+        </ion-card-header>
+      </ion-card>
+    </ion-virtual-scroll>
+  </ion-card>
+
+</ion-content>

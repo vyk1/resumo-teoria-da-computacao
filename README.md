@@ -24,10 +24,16 @@ Clone este repositório:
 git clone https://github.com/vyk1/resumo-teoria-da-computacao.git
 ```
 
-Rode a aplicação:
+Instale as dependências:
 
 ```
 cd resumo-teoria-da-computacao
+npm install
+```
+
+Rode a aplicação:
+
+```
 npm run start
 ```
 

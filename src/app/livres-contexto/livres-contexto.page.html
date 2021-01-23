@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Linguagens Livres de Contexto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        Incluem as Linguagens Regulares
+      </ion-item>
+      <ion-item>
+        São mais poderosas que as LR
+      </ion-item>
+      <ion-item>
+        Como mostrar que uma linguagem é Livre de Contexto?
+      </ion-item>
+      <ion-item>
+        <ul>
+          <li (click)="navigateToG()">
+            <ion-text color="secondary">Gramáticas Livres de Contexto </ion-text>
+          </li>
+        </ul>
+        <br />
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Exemplos</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Analisadores sintáticos</li>
+        <li>Verificar balanceamentos</li>
+        <li>Avaliar expressões aritméticas</li>
+        <li>Processadores de texto</li>
+        <li>Contrução de Linguagens de Programação</li>
+      </ul>
+    </ion-item>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>Fontes</ion-card-title>
+    </ion-card-header>
+
+    <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+      <ion-card *virtualItem="let item; let itemBounds = bounds;">
+        <ion-card-header>
+          <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+            <ion-card-title>{{ item.title }} {{item.key}}</ion-card-title>
+          </a>
+        </ion-card-header>
+      </ion-card>
+    </ion-virtual-scroll>
+  </ion-card> -->
+
+</ion-content>

@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'regulares',
     loadChildren: () => import('./regulares/regulares.module').then(m => m.RegularesPageModule)
   },
+  {
+    path: 'livres-contexto',
+    loadChildren: () => import('./livres-contexto/livres-contexto.module').then( m => m.LivresContextoPageModule)
+  },
 ];
 @NgModule({
   imports: [

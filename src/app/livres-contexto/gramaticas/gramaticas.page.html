@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gramáticas Livres de Contexto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Definição</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>AS GLC são uma forma de escrever as LC</li>
+        <li>Apresentam todas as contruções possíveis de uma linguagens</li>
+        <li>Todas as palavras da linguagem L podem ser geradas pela gramática</li>
+        <ul>
+          <li>Vice e versa</li>
+        </ul>
+      </ul>
+    </ion-item>
+
+    <ion-item>
+      <ion-img id="chomsky-h" src="../../assets/images/chomsky-h.jpg"></ion-img>
+      <a href="https://www.biorxiv.org/content/biorxiv/early/2020/03/06/2020.03.05.979310.full.pdf" target="_blank"
+        rel="noopener noreferrer">Fonte:
+        Hierarquia de Chomsky</a>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-item>São definidas pela tupla VTSP:</ion-item>
+
+      <ion-item>
+        <ul>
+          <li>V é um conjunto de símbolos não terminais (chamados de variáveis)</li>
+          <li>T é conjunto de símbolos terminais (alfabeto)</li>
+          <li>S ∈ V e é o símbolo inicial</li>
+          <li>P é o conjunto de regras de produção na forma
+            <ul>
+              <li>A -> &alpha; onde A ∈ V e &alpha; ∈ (V u T)*</li>
+              <li>Há apenas uma unica variável do lado esquerdo da regra</li>
+              <li>Há qualquer combinação de variável e símbolos terminais do lado direito da regra</li>
+            </ul>
+          </li>
+        </ul>
+      </ion-item>
+
+      <ion-item>
+        <ion-img id="comp-tree" src="../../assets/images/glc.png"></ion-img>
+        <a href="http://wwwp.fc.unesp.br/~simonedp/zipados/TC03.pdf" target="_blank" rel="noopener noreferrer">Fonte:
+          Exemplo de GLC</a>
+        <ion-item>
+          
+        </ion-item>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>Operações</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li><b>Complemento</b></li>
+        <li><b>União</b></li>
+        <li><b>Intersecção</b></li>
+        <li><b>Diferença</b></li>
+        <li><b>Fecho de Kleene</b></li>
+      </ul>
+    </ion-item>
+  </ion-card> -->
+
+</ion-content>

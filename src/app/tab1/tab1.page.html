@@ -9,21 +9,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Lista</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Resumo</ion-card-subtitle>
       <ion-card-title>Linguagens Regulares</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      Sobre Linguagens Regulares, AFD, AFND, ER...
+      Sobre AF (D e ND), Expressões Regulares e Lema do bombeamento
     </ion-card-content>
 
     <ion-button (click)="navigateToLR()" expand="block">
+      <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Linguagens Livres de Contexto</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Sobre Gramáticas Livres de Contexto, Forma Normal de Chomsky e Autômatos com Pilha
+    </ion-card-content>
+
+    <ion-button (click)="navigateToLC()" expand="block">
       <ion-icon name="arrow-forward-circle-outline"></ion-icon>
     </ion-button>
   </ion-card>

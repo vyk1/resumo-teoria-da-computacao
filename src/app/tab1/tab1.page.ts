@@ -14,4 +14,8 @@ export class Tab1Page {
     this.router.navigate(['regulares'], {})
   }
 
+  navigateToLC() {
+    this.router.navigate(['livres-contexto'], {})
+  }
+
 }
